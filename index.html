@@ -9,7 +9,7 @@
     <script src="https://kit.fontawesome.com/4bd251a57a.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<div class="app">
+<div class="wrapper" id="app">
     <div class="top">
         <header class="header center">
             <div class="header__left">
@@ -54,8 +54,7 @@
                             </div>
                         </div>
                     </details>
-                    <input type="text" class="text_search" placeholder="Search for item...">
-                    <button class="search_button"><img src="img/search_image.png" alt="search_image"></button>
+                    <filter-el></filter-el>
                 </form>
             </div>
             <div class="header__right">
@@ -561,7 +560,7 @@
                     <li class="new_menu_list"><a href="Product.html" class="new_menu_link">Men</a></li>
                     <li class="new_menu_list"><a href="single_page.html" class="new_menu_link">Women</a></li>
                     <li class="new_menu_list"><a href="#" class="new_menu_link">Child</a></li>
-                    <li class="new_menu_list"><a href="#" class="new_menu_link">Apparel</a></li>
+                    <li class="new_menu_list"><a href="#" class="new_menu_link">wrapperarel</a></li>
                     <li class="new_menu_list"><a href="#" class="new_menu_link">Brows All</a></li>
                 </ul>
             </nav>
@@ -578,4 +577,9 @@
     </footer>
 </div>
 </body>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="js/FilterComp.js"></script>
+<script src="js/ErrorComp.js"></script>
+<script src="js/main.js"></script>
 </html>
