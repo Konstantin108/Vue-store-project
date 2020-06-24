@@ -42,15 +42,18 @@ Vue.component('product', {
     },
 
     template: `
-    <div class="product-item">
-                <img :src="img" alt="Some img" class="oops-img">
-                <div class="desc">
-                    <h3>{{product.product_name}}</h3>
-                    <p>$ {{product.price}}</p>
-                    <button class="buy-btn" @click="cartAPI.addProduct(product)">Купить</button>
-<!-- 1                    <button class="buy-btn" @click="$root.$refs.cart.addProduct(product)">Купить</button>-->
-<!-- 2                    <button class="buy-btn" @click="$parent.$parent.$refs.cart.addProduct(product)">Купить</button>-->
+         <div class="featured_link">
+                <div class="block__featured">
+                        <div class="block__self1">
+                            <img :src="img" alt="photo" class="featured__photo">
+                            <div class="cart__hover" @click="cartAPI.addProduct(product)">
+                                  <img src="img/cart_hover.svg" alt="cart_hover_img" class="cart_hover_img">
+                                  Add to Cart
+                            </div>
+                        </div>
+                        <p class="featured_text">{{product.product_name}}</p>
+                        <p class="featured_text2">$\{{product.price}}</p>
                 </div>
-            </div>
+         </div>
     `
 });

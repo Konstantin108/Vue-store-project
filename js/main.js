@@ -1,4 +1,4 @@
-const API = 'https://raw.githubusercontent.com/Konstantin108/Vue-store-project/master/responses';
+
 
 
 const app = new Vue({
