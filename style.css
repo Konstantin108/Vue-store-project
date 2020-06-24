@@ -27,7 +27,7 @@ a {
   clear: both;
 }
 
-.wrapper {
+.app {
   min-height: 100%;
   display: flex;
   flex-direction: column;
