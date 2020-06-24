@@ -73,8 +73,8 @@ Vue.component('cart-item', {
                                 <p class="cart__text_1">{{cartItem.product_name}}</p>
                                 <img src="img/stars.png" alt="stars" class="stars">
                                 <div class="item_bio">
-                                    <p class="product-quantity">{{cartItem.quantity}} X </p>
-                                    <p class="product-price">$ {{cartItem.quantity*cartItem.price}}₽</p>
+                                    <p class="product-quantity">{{cartItem.quantity}} X</p>
+                                    <p class="product-price">$ {{cartItem.quantity*cartItem.price}}</p>
                                 </div>
                             </div>
                         <div class="right_desc_block">
