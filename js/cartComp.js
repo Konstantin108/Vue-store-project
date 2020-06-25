@@ -60,14 +60,28 @@ Vue.component('cart', {
                     :img="item.product_img"
                     @remove="remove">
                     </cart-item>
+                    <total-sum v-if="cartItems.length > 0"></total-sum>
             </div>
         </div>`
+});
+
+Vue.component('total-sum', {
+    template: `
+                <div>
+                    <div class="text__total">TOTAL</div>
+                    <div class="cart_button_down">
+                        <a href="checkout.html" class="cart__button_sub">Checkout</a>
+                        <a href="shopping_cart.html" class="cart__button_sub last__button">Go to cart</a>
+                    </div>
+                </div>
+   `
 });
 
 Vue.component('cart-item', {
     props: ['cartItem', 'img'],
     template: `
                 <div class="cart__content">
+                    <a href="single_page.html" class="link_in_desk">
                         <img :src="img" alt="Some image" class="cart__image__content">
                             <div class="desk">
                                 <p class="cart__text_1">{{cartItem.product_name}}</p>
@@ -77,6 +91,7 @@ Vue.component('cart-item', {
                                     <p class="product-price">$ {{cartItem.quantity*cartItem.price}}</p>
                                 </div>
                             </div>
+                    </a>        
                         <div class="right_desc_block">
                             <button class="delete_cart_item" @click="$emit('remove', cartItem)">
                                 <i class="fas fa-times-circle"></i>

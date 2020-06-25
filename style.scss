@@ -1489,6 +1489,14 @@ button {
   background-image: url(img/cart_image_girl.png);
 }
 
+.link_in_desk{
+  display: flex;
+}
+
+.link_in_desk:hover .cart__text_1{
+  color: #f16d7f;
+}
+
 .fa-times-circle {
   font-family: FontAwesome;
   font-size: 16px;
@@ -1581,12 +1589,21 @@ button {
   transition: .4s;
 }
 
+.cart_button_down{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .text__total {
   font-family: Lato;
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
   color: #222222;
+  margin-top: 20px;
+  margin-bottom: 22px;
 }
 
 .summ {
