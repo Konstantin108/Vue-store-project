@@ -1,4 +1,4 @@
-const API = 'https://raw.githubusercontent.com/Konstantin108/Vue-store-project/save-brfore-new-cart-make/responses';
+
 
 
 const app = new Vue({
