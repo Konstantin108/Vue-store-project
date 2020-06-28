@@ -58,6 +58,8 @@ Vue.component('cart', {
                     :key="item.id_product"
                     :cart-item="item" 
                     :img="item.product_img"
+                    :color="item.product_color"
+                    :size="item.product_size"
                     @remove="remove">
                     </cart-item>
                     <total-sum v-if="cartItems.length > 0"></total-sum>
@@ -85,6 +87,8 @@ Vue.component('cart-item', {
                         <img :src="img" alt="Some image" class="cart__image__content">
                             <div class="desk">
                                 <p class="cart__text_1">{{cartItem.product_name}}</p>
+                                <p>{{cartItem.product_size}}</p>
+                                <p>{{cartItem.product_color}}</p>
                                 <img src="img/stars.png" alt="stars" class="stars">
                                 <div class="item_bio">
                                     <p class="product-quantity">{{cartItem.quantity}} X</p>

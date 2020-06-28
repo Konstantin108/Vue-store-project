@@ -4,95 +4,95 @@
     "id_product": 11,
     "product_name": "Mango People t-shirt",
     "price": 52,
-    "size": "l",
-    "color": "black"
+    "product_size": "l",
+    "product_color": "black"
   },
   {
     "product_img": "img/product_content2.jpg",
     "id_product": 12,
     "product_name": "Embroidered cotton blouse",
     "price": 55,
-    "size": "l",
-    "color": "brown"
+    "product_size": "l",
+    "product_color": "brown"
   },
   {
     "product_img": "img/product_content3.jpg",
     "id_product": 13,
     "product_name": "Metallic knit top",
     "price": 52,
-    "size": "xxl",
-    "color": "blue"
+    "product_size": "xxl",
+    "product_color": "blue"
   },
   {
     "product_img": "img/product_content4.jpg",
     "id_product": 14,
     "product_name": "Fringes details cotton t-shirt",
     "price": 89,
-    "size": "s",
-    "color": "grey"
+    "product_size": "s",
+    "product_color": "grey"
   },
   {
     "product_img": "img/product_content5.jpg",
     "id_product": 15,
     "product_name": "V-neckline essential t-shirt",
     "price": 89,
-    "size": "m",
-    "color": "blue"
+    "product_size": "m",
+    "product_color": "blue"
   },
   {
     "product_img": "img/product_content6.jpg",
     "id_product": 16,
     "product_name": "Crew neckline blouse",
     "price": 129,
-    "size": "xs",
-    "color": "blue"
+    "product_size": "xs",
+    "product_color": "blue"
   },
   {
     "product_img": "img/product_content7.jpg",
     "id_product": 17,
     "product_name": "Basic t-shirt",
     "price": 56,
-    "size": "xxs",
-    "color": "grey"
+    "product_size": "xxs",
+    "product_color": "grey"
   },
   {
     "product_img": "img/product_content8.jpg",
     "id_product": 18,
     "product_name": "Printed knit top",
     "price": 75,
-    "size": "xs",
-    "color": "brown"
+    "product_size": "xs",
+    "product_color": "brown"
   },
   {
     "product_img": "img/product_content9.jpg",
     "id_product": 19,
     "product_name": "Polka-dot print blouse",
     "price": 52,
-    "size": "s",
-    "color": "blue"
+    "product_size": "s",
+    "product_color": "blue"
   },
   {
     "product_img": "img/product_content2.jpg",
     "id_product": 20,
     "product_name": "Pleated T-shirt",
     "price": 55,
-    "size": "m",
-    "color": "brown"
+    "product_size": "m",
+    "product_color": "brown"
   },
   {
     "product_img": "img/product_content1.jpg",
     "id_product": 21,
     "product_name": "Crew neckline blouse",
     "price": 106,
-    "size": "m",
-    "color": "black"
+    "product_size": "m",
+    "product_color": "black"
   },
   {
     "product_img": "img/product_content2.jpg",
     "id_product": 22,
     "product_name": "Flowing halter top",
     "price": 19,
-    "size": "l",
-    "color": "brown"
+    "product_size": "l",
+    "product_color": "brown"
   }
 ]
