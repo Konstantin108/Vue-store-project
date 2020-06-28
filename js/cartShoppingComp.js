@@ -46,14 +46,10 @@ Vue.component('cart_shopping', {
     },
     template: `
         <div>
-            <button class="cart_summary"
-                    type="button"
-                    @click="showCart = !showCart">
-                <img class="header__cart" src="img/cart.svg" alt="cart">
-            </button>
-            <div class="drop__cart" v-show="showCart">
-                    <p v-if="!cartItems.length"></br>Корзина пуста</p>
-                    <cart-item class="cart__content" 
+        <product-header v-if="cartItems.length > 0"></product-header>
+            <div class="shopping_cart">
+                    <p v-if="!cartItems.length">Вы еще не добавили ни одного товара в корзину</p>
+                    <cart-item class="shopping__content" 
                     v-for="item of cartItems" 
                     :key="item.id_product"
                     :cart-item="item" 
@@ -65,6 +61,19 @@ Vue.component('cart_shopping', {
                     <total-sum v-if="cartItems.length > 0"></total-sum>
             </div>
         </div>`
+});
+
+Vue.component('product-header', {
+   template:`
+              <div class="content center">
+                   <div class="left_basis_block border_for_test line_shopping_1 line__shopping">Product Details</div>
+                   <div class="block_shopping_1 proba_standart_parameter_top line_shopping_1 border_for_test">unite Price</div>
+                   <div class="block_shopping_2 proba_standart_parameter_top line_shopping_1 border_for_test">Quantity</div>
+                   <div class="block_shopping_3 proba_standart_parameter_top line_shopping_1 border_for_test">shipping</div>
+                   <div class="block_shopping_4 proba_standart_parameter_top line_shopping_1 border_for_test">Subtotal</div>
+                   <div class="block_shopping_5 proba_standart_parameter_top line_shopping_1 border_for_test">ACTION</div>
+              </div>
+   `
 });
 
 Vue.component('total-sum', {
@@ -82,23 +91,34 @@ Vue.component('total-sum', {
 Vue.component('cart-item', {
     props: ['cartItem', 'img'],
     template: `
-                <div class="cart__content">
-                    <a href="single_page.html" class="link_in_desk">
-                        <img :src="img" alt="Some image" class="cart__image__content">
-                            <div class="desk">
-                                <p class="cart__text_1">{{cartItem.product_name}}</p>
-                                <img src="img/stars.png" alt="stars" class="stars">
-                                <div class="item_bio">
-                                    <p class="product-quantity">{{cartItem.quantity}} X</p>
-                                    <p class="product-price">$ {{cartItem.quantity*cartItem.price}}</p>
+                <div class="shopping__content">
+                    <div class="width-container">
+                        <a href="single_page.html" class="shopping_link">
+                            <img :src="img" alt="Some image" class="shopping_desc_img">
+                            <div class="shopping_titles">
+                                <p class="shopping_title_1">{{cartItem.product_name}}</p>
+                                <div class="shopping__plus_text1">    
+                                        <p class="shopping_cart_color1">Color: <span class="shopping_cart_color2">{{cartItem.product_color}}</span></p>
+                                        <p class="shopping_cart_color1">Size: <span class="shopping_cart_color3">{{cartItem.product_size}}</span></p>
                                 </div>
                             </div>
-                    </a>        
-                        <div class="right_desc_block">
-                            <button class="delete_cart_item" @click="$emit('remove', cartItem)">
-                                <i class="fas fa-times-circle"></i>
-                            </button>
-                        </div>
+                        </a>
+                    </div>    
+                    <div class="block_shopping_1 proba_standart_parameter border_for_test line__shopping_other">
+                    $\{{cartItem.price}}
+                    </div>
+                    <div class="block_shopping_2 proba_standart_parameter border_for_test line__shopping_other">
+                        <div class="shopping_cal">{{cartItem.quantity}}</div>
+                    </div>
+                    <div class="block_shopping_3 proba_standart_parameter border_for_test line__shopping_other">
+                    FREE
+                    </div>
+                    <div class="block_shopping_4 proba_standart_parameter border_for_test line__shopping_other">
+                    $\{{cartItem.quantity*cartItem.price}}
+                    </div>
+                    <div class="block_shopping_5 proba_standart_parameter border_for_test line__shopping_other">
+                        <i class="fas fa-times-circle del_btn" @click="$emit('remove', cartItem)"></i>
+                    </div>  
                 </div>
     `
 });

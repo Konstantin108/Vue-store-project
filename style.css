@@ -1418,6 +1418,10 @@ button {
   z-index: 2;
 }
 
+.shopping_cart {
+  font-size: 40px;
+}
+
 .cart_block {
   width: 32px;
   height: 29px;
@@ -1447,6 +1451,42 @@ button {
 .cart__image__content {
   width: 72px;
   height: 85px;
+}
+
+.shopping_desc_img {
+  width: 100px;
+  height: 115px;
+}
+
+.width-container {
+  width: 490px;
+}
+
+.shopping_link {
+  display: flex;
+}
+
+.shopping_link:hover .shopping_title_1 {
+  color: #f16d7f;
+}
+
+.shopping_link:hover .shopping_cart_color1 {
+  color: #f16d7f;
+}
+
+.shopping_link:hover .shopping_cart_color2 {
+  color: #f16d7f;
+}
+
+.shopping_link:hover .shopping_cart_color3 {
+  color: #f16d7f;
+}
+
+.shopping_titles {
+  display: flex;
+  flex-direction: column;
+  margin-left: 26px;
+  justify-content: space-around;
 }
 
 .item_bio {
@@ -1524,6 +1564,16 @@ button {
   display: flex;
   padding-bottom: 20px;
   padding-top: 20px;
+}
+
+.shopping__content {
+  display: flex;
+  height: 166px;
+  align-items: center;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  border-bottom: 1px solid #eaeaea;
+  border-collapse: collapse;
 }
 
 .desk {
@@ -3095,24 +3145,29 @@ input[type=radio] {
   color: #656565;
 }
 
-.shopping_cal::-webkit-inner-spin-button {
-  display: none;
+.price_parameter {
+  font-family: Lato;
+  font-size: 13px;
+  font-weight: 400;
+  color: #656565;
+  text-transform: uppercase;
+}
+
+.del_btn {
+  cursor: pointer;
 }
 
 .shopping_cal {
   width: 54px;
   height: 30px;
-  background-color: #ffffff;
   border: 1px solid #eaeaea;
   outline: none;
   font-family: Lato;
   font-size: 13px;
-  line-height: 20px;
   font-weight: 400;
   color: #656565;
   text-align: center;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-top: 4px;
 }
 
 .shopping__image {
@@ -3149,6 +3204,14 @@ input[type=radio] {
   margin-left: 22px;
 }
 
+.shopping_title_1 {
+  font-weight: 400;
+  font-family: Lato;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #222222;
+}
+
 .shopping_line_title {
   height: 15px;
   width: 160px;
@@ -3163,6 +3226,29 @@ input[type=radio] {
 .shopping__plus_text {
   height: 15px;
   width: 160px;
+}
+
+.shopping_cart_color1 {
+  font-family: Lato;
+  font-size: 13px;
+  font-weight: 600;
+  color: #575757;
+}
+
+.shopping_cart_color2 {
+  font-family: Lato;
+  text-transform: capitalize;
+  font-size: 13px;
+  font-weight: 300;
+  color: #6f6e6e;
+}
+
+.shopping_cart_color3 {
+  font-family: Lato;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 300;
+  color: #6f6e6e;
 }
 
 .shopping_text1 {

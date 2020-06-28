@@ -57,7 +57,9 @@
                 </form>
             </div>
             <div class="header__right">
-                <cart_shopping ref="cart_shopping"></cart_shopping>
+                <button class="cart_summary">
+                    <img class="header__cart" src="img/cart.svg" alt="cart">
+                </button>
                 <a href="#" class="button">My accaunt<img src="img/white_arrow.png" alt="white_arrow"
                                                           class="white_arrow"></a>
             </div>
@@ -247,6 +249,9 @@
                                                                                                      class="link_arrivals">Men/</a>
                 <a href="#" class="link_arrivals">New Arrivals</a></nav>
         </nav>
+        <div class="center">
+            <cart_shopping ref="cart_shopping"></cart_shopping>
+        </div>
         <div class="content center">
             <div class="left_basis_block border_for_test line_shopping_1 line__shopping">Product Details</div>
             <div class="block_shopping_1 proba_standart_parameter_top line_shopping_1 border_for_test">unite Price</div>
@@ -393,7 +398,7 @@
             </div>
         </div>
         <div class="new-block-for-products center">
-            <products_shopping ref="products"></products_shopping>
+            <products_shopping ref="products_shopping"></products_shopping>
             <error ref="error"></error>
         </div>
     </div>
@@ -488,10 +493,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="js/cartShoppingComp.js"></script>
-<script src="js/cartComp.js"></script>
 <script src="js/ProductShoppingComp.js"></script>
-<script src="js/ProductSingleComp.js"></script>
-<script src="js/ProductComp.js"></script>
 <script src="js/FilterSingleComp.js"></script>
 <script src="js/FilterComp.js"></script>
 <script src="js/ErrorComp.js"></script>
