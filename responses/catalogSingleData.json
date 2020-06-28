@@ -5,7 +5,8 @@
     "product_name": "Cashmere Raglan Mockneck",
     "price": 52,
     "product_size": "s",
-    "product_color": "black"
+    "product_color": "black",
+    "product_link":  "single_page13.html"
   },
   {
     "product_img": "img/girl_cost2.jpg",
@@ -13,7 +14,8 @@
     "product_name": "Cotton-Linen Crew",
     "price": 55,
     "product_size": "xl",
-    "product_color": "black"
+    "product_color": "black",
+    "product_link":  "single_page14.html"
   },
   {
     "product_img": "img/girl_cost3.jpg",
@@ -21,7 +23,8 @@
     "product_name": "Cashmere Crew",
     "price": 106,
     "product_size": "xxl",
-    "product_color": "yellow"
+    "product_color": "yellow",
+    "product_link":  "single_page15.html"
   },
   {
     "product_img": "img/girl_cost4.jpg",
@@ -29,6 +32,7 @@
     "product_name": "Flowing halter top",
     "price": 19,
     "product_size": "l",
-    "product_color": "grey"
+    "product_color": "grey",
+    "product_link":  "single_page16.html"
   }
 ]

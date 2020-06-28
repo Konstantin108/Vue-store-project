@@ -30,14 +30,19 @@ Vue.component('cart_shopping', {
                         if (item.quantity > 1) {
                             item.quantity--;
                         } else {
-                            this.cartItems.splice(this.cartItems.indexOf(item), 1)
+                            this.cartItems.splice(this.cartItems.indexOf(item), 1);
                         }
                     }
                 })
         },
-        // plusQuantity(item) {
-        //     item.quantity++;
-        // },
+        delObject(item) {
+            this.$parent.getJson(`${API}/deleteObjectFromBasket.json`)
+                .then(data => {
+                    if (data.result === 1) {
+                        this.cartItems.splice(this.cartItems.indexOf(item), 1);
+                    }
+                });
+        },
         plusQuantity(item) {
             this.$parent.getJson(`${API}/addToBasket.json`)
                 .then(data => {
@@ -46,9 +51,14 @@ Vue.component('cart_shopping', {
                     }
                 });
         },
-        // minusQuantity(item) {
-        //     item.quantity--;
-        // },
+        clearCart(item) {
+            this.$parent.getJson(`${API}/clearCart.json`)
+                .then(data => {
+                    if (data.result === 1) {
+                        this.cartItems.splice(0, 9999);
+                    }
+                })
+        },
     },
     mounted() {
         this.$parent.getJson(`${API}/addToBasket.json`)
@@ -64,17 +74,19 @@ Vue.component('cart_shopping', {
             <div class="shopping_cart">
                     <p v-if="!cartItems.length">Вы еще не добавили ни одного товара в корзину</p>
                     <cart-item class="shopping__content" 
-                    v-for="item of cartItems" 
-                    :key="item.id_product"
-                    :cart-item="item" 
-                    :img="item.product_img"
-                    :color="item.product_color"
-                    :size="item.product_size"
-                    @remove="remove"
-                    @plusQuantity="plusQuantity"
-                    @minusQuantity="minusQuantity">
-                    </cart-item>
-                    <total-sum v-if="cartItems.length > 0"></total-sum>
+                                v-for="item of cartItems" 
+                                :key="item.id_product"
+                                :cart-item="item" 
+                                :img="item.product_img"
+                                :color="item.product_color"
+                                :size="item.product_size"
+                                @remove="remove"
+                                @plusQuantity="plusQuantity"
+                                @delObject="delObject">
+                                </cart-item>
+                                <total-sum v-if="cartItems.length > 0"
+                                @clearCart="clearCart">
+                    </total-sum>
             </div>
         </div>`
 });
@@ -95,7 +107,7 @@ Vue.component('product-header', {
 Vue.component('total-sum', {
     template: `
                     <div class="shopping_button_down">
-                        <button class="clear__cart">cLEAR SHOPPING CART</button>
+                        <button class="clear__cart" @click="$emit('clearCart', cartItems)">cLEAR SHOPPING CART</button>
                         <a href="Product.html" class="clear__cart"><p>continue shopping</p></a>
                     </div>
    `
@@ -133,7 +145,7 @@ Vue.component('cart-item', {
                     $\{{cartItem.quantity*cartItem.price}}
                     </div>
                     <div class="block_shopping_5 proba_standart_parameter line__shopping_other">
-                        <i class="fas fa-times-circle del_btn"></i>
+                        <i class="fas fa-times-circle del_btn" @click="$emit('delObject', cartItem)"></i>
                     </div>  
                 </div>
     `

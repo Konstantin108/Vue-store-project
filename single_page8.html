@@ -53,13 +53,11 @@
                             </div>
                         </div>
                     </details>
-                    <filter-el></filter-el>
+                    <filter-single-el></filter-single-el>
                 </form>
             </div>
             <div class="header__right">
-                <button class="cart_summary">
-                    <img class="header__cart" src="img/cart.svg" alt="cart">
-                </button>
+                <cart ref="cart"></cart>
                 <a href="#" class="button">My accaunt<img src="img/white_arrow.png" alt="white_arrow"
                                                           class="white_arrow"></a>
             </div>
@@ -209,7 +207,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="menu__list"><a href="Product.htmProduct.html" class="menu__link">Hot Deals</a>
+                <li class="menu__list"><a href="Product.html" class="menu__link">Hot Deals</a>
                     <div class="drop drop__last">
                         <div class="drop__flex">
                             <h3 class="drop__h3">hot deals</h3>
@@ -249,49 +247,144 @@
                                                                                                      class="link_arrivals">Men/</a>
                 <a href="#" class="link_arrivals">New Arrivals</a></nav>
         </nav>
-        <div class="center">
-            <cart_shopping ref="cart_shopping"></cart_shopping>
-        </div>
-        <div class="coup_discont center">
-            <div class="coup_block1">
-                <h2 class="coup_title">Shipping Adress</h2>
-                <details class="coup__details">
-                    <summary class="text_view text_view_summary">Bangladesh</summary>
-                    <ul class="drop__view_menu">
-                        <li class="drop__view_list"><a href="#" class="drop__view_link">Moscow</a></li>
-                        <li class="drop__view_list"><a href="#" class="drop__view_link">berlin</a></li>
-                        <li class="drop__view_list"><a href="#" class="drop__view_link">Washington</a></li>
-                        <li class="drop__view_list"><a href="#" class="drop__view_link">Tokyo</a></li>
-                        <li class="drop__view_list"><a href="#" class="drop__view_link">Vienna</a></li>
-                    </ul>
-                </details>
-                <input type="text" class="text_view" placeholder="State">
-                <input type="number" class="text_view" placeholder="Postcode / Zip">
-                <div class="coup__butt text__coupon_position">get a quote</div>
+        <div class="women">
+            <div class="women_main_content">
+                <a href="#" class="women_slider_element"><i
+                        class="fas fa-chevron-left slider_arrow fa-chevron-left-women"></i></a>
+                <img src="img/women_main_img.jpg" alt="women_main_img" class="women_main_img">
+                <a href="#" class="women_slider_element"><i
+                        class="fas fa-chevron-right slider_arrow fa-chevron-right-women"></i></a>
             </div>
-            <div class="coup_block2">
-                <h2 class="coup_title">coupon discount</h2>
-                <p class="coup_text">Enter your coupon code if you have one</p>
-                <input type="text" class="text_view" placeholder="State">
-                <div class="coup__butt2 text__coupon_position">wrapperly coupon</div>
-            </div>
-            <div class="coup_block3">
-                <div class="coup__sub_block3">
-                    <div>
-                        <span class="sub__total_price">Sub total</span><span
-                            class="sub__total_price ml_distance">$900</span>
+            <div class="position__women_blocks"></div>
+            <div class="women__collection">
+                <article class="top__block">
+                    <div class="w__top_text_and_bottom">
+                        <div class="w__collection">WOMEN COLLECTION</div>
+                        <div class="bottom__w"></div>
+                        <div class="bottom__w2"></div>
                     </div>
-                    <div>
-                        <span class="coup_title">GRAND TOTAL</span><span
-                            class="coup_title_special_color ml_distance">$900</span>
+                    <h2 class="w__text_moshino">Printed knit top</h2>
+                    <p class="w__text">Compellingly actualize fully researched processes before proactive outsourcing.
+                        Progressively syndicate collaborative architectures before cutting-edge services. Completely
+                        visualize
+                        parallel core competencies rather than exceptional portals.</p>
+                    <div class="material_and_designer">
+                        <div class="w__left_block">
+                            <span class="w__material">MATERIAL:</span>
+                            <span class="w__design">COTTON</span>
+                        </div>
+                        <div class="w__right_block">
+                            <span class="w__material">DESIGNER:</span>
+                            <span class="w__design">BINBURHAN</span>
+                        </div>
                     </div>
+                    <p class="w__price">$75</p>
+                </article>
+                <div class="bottom__block">
+                    <div class="summares_bottom__block">
+                        <div class="choose__color_subblock">
+                            <h3 class="summares__titles">CHOOSE COLOR</h3>
+                            <details class="choose__size_details">
+                                <summary class="choose__color_summary_drop">
+                                    <div class="color__block">
+                                        <div class="color_sample red__sample"></div>
+                                        <p class="color__name">Red</p>
+                                    </div>
+                                </summary>
+                                <ul class="choose__size_menu">
+                                    <li class="choose__size_menu_list">
+                                        <a href="#" class="choose__color_menu_link">
+                                            <div class="color__block">
+                                                <div class="color_sample black__sample">
+                                                </div>
+                                                black
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="choose__size_menu_list">
+                                        <a href="#" class="choose__color_menu_link">
+                                            <div class="color__block">
+                                                <div class="color_sample yellow__sample">
+                                                </div>
+                                                yellow
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="choose__size_menu_list">
+                                        <a href="#" class="choose__color_menu_link">
+                                            <div class="color__block">
+                                                <div class="color_sample pink__sample">
+                                                </div>
+                                                pink
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="choose__size_menu_list">
+                                        <a href="#" class="choose__color_menu_link">
+                                            <div class="color__block">
+                                                <div class="color_sample green_sample">
+                                                </div>
+                                                green
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="choose__size_menu_list">
+                                        <a href="#" class="choose__color_menu_link">
+                                            <div class="color__block">
+                                                <div class="color_sample white__sample">
+                                                </div>
+                                                white
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="choose__size_menu_list">
+                                        <a href="#" class="choose__color_menu_link">
+                                            <div class="color__block">
+                                                <div class="color_sample blue_sample">
+                                                </div>
+                                                blue
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </details>
+                        </div>
+                        <div class="choose__size_subblock">
+                            <h3 class="summares__titles">CHOOSE SIZE</h3>
+                            <details class="choose__size_details">
+                                <summary class="choose__size_summary_drop">xxl</summary>
+                                <ul class="choose__size_menu">
+                                    <li class="choose__size_menu_list"><a href="#"
+                                                                          class="choose__size_menu_link">xxs</a></li>
+                                    <li class="choose__size_menu_list"><a href="#" class="choose__size_menu_link">xs</a>
+                                    </li>
+                                    <li class="choose__size_menu_list"><a href="#" class="choose__size_menu_link">s</a>
+                                    </li>
+                                    <li class="choose__size_menu_list"><a href="#" class="choose__size_menu_link">m</a>
+                                    </li>
+                                    <li class="choose__size_menu_list"><a href="#" class="choose__size_menu_link">l</a>
+                                    </li>
+                                    <li class="choose__size_menu_list"><a href="#" class="choose__size_menu_link">xl</a>
+                                    </li>
+                                </ul>
+                            </details>
+                        </div>
+                        <div class="quanity__subblock">
+                            <h3 class="summares__titles">QUANTITY</h3>
+                            <input type="number" class="quanity_input">
+                        </div>
+                    </div>
+                    <bottom class="add__bottom_cart"><i class="fas fa-shopping-cart cart__bottom"></i>Add to Cart
+                    </bottom>
                 </div>
-                <a href="checkout.html" class="to__checkout text__coupon_position">proceed to checkout</a>
             </div>
         </div>
-        <div class="new-block-for-products center">
-            <products_shopping ref="products_shopping"></products_shopping>
-            <error ref="error"></error>
+        <div class="women__space"></div>
+        <div class="like_also center">
+            <h2 class="like__also_title">you may like also</h2>
+                <products_single ref="products_single"></products_single>
+                <error ref="error"></error>
+            </div>
         </div>
     </div>
     <footer class="footer">
@@ -362,7 +455,7 @@
                         CATEGORY</a>
                     </li>
                     <li class="new_menu_list"><a href="Product.html" class="new_menu_link">Men</a></li>
-                    <li class="new_menu_list"><a href="single_page.html" class="new_menu_link">Women</a></li>
+                    <li class="new_menu_list"><a href="#" class="new_menu_link">Women</a></li>
                     <li class="new_menu_list"><a href="#" class="new_menu_link">Child</a></li>
                     <li class="new_menu_list"><a href="#" class="new_menu_link">wrapperarel</a></li>
                     <li class="new_menu_list"><a href="#" class="new_menu_link">Brows All</a></li>
@@ -385,7 +478,10 @@
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="js/cartShoppingComp.js"></script>
+<script src="js/cartComp.js"></script>
 <script src="js/ProductShoppingComp.js"></script>
+<script src="js/ProductSingleComp.js"></script>
+<script src="js/ProductComp.js"></script>
 <script src="js/FilterSingleComp.js"></script>
 <script src="js/FilterComp.js"></script>
 <script src="js/ErrorComp.js"></script>
