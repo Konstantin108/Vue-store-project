@@ -58,6 +58,7 @@ Vue.component('cart', {
                     :key="item.id_product"
                     :cart-item="item" 
                     :img="item.product_img"
+                    :href="item.product_link"
                     :color="item.product_color"
                     :size="item.product_size"
                     @remove="remove">
@@ -80,10 +81,10 @@ Vue.component('total-sum', {
 });
 
 Vue.component('cart-item', {
-    props: ['cartItem', 'img'],
+    props: ['cartItem', 'img', 'href'],
     template: `
                 <div class="cart__content">
-                    <a href="single_page.html" class="link_in_desk">
+                    <a :href="href" class="link_in_desk">
                         <img :src="img" alt="Some image" class="cart__image__content">
                             <div class="desk">
                                 <p class="cart__text_1">{{cartItem.product_name}}</p>

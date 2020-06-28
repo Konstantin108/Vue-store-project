@@ -23,12 +23,17 @@ Vue.component('products_shopping', {
     },
     template: `
         <div class="products">
-            <product v-for="item of filtered" :key="item.id_product" :img="item.product_img" :product="item"></product>
+            <product v-for="item of filtered"
+                    :key="item.id_product"
+                    :img="item.product_img"
+                    :href="item.product_link"
+                    :product="item">
+            </product>
         </div>
     `
 });
 Vue.component('product', {
-    props: ['product', 'img'],
+    props: ['product', 'img', 'href'],
     data() {
         return {
             /**
@@ -50,8 +55,10 @@ Vue.component('product', {
                                   Add to Cart
                             </div>
                         </div>
-                        <p class="featured_text">{{product.product_name}}</p>
-                        <p class="featured_text2">$\{{product.price}}</p>
+                        <a :href="href" class="link_for_catalog_item">
+                            <p class="featured_text">{{product.product_name}}</p>
+                            <p class="featured_text2">$\{{product.price}}</p>
+                        </a>
                 </div>
          </div>
     `

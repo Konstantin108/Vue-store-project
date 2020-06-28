@@ -55,7 +55,7 @@ Vue.component('product', {
                                   Add to Cart
                             </div>
                         </div>
-                        <a :href="href" class="wqwqwq">
+                        <a :href="href" class="link_for_catalog_item">
                             <p class="featured_text">{{product.product_name}}</p>
                             <p class="featured_text2">$\{{product.price}}</p>
                         </a>
