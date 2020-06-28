@@ -1,4 +1,4 @@
-
+const API = 'https://raw.githubusercontent.com/Konstantin108/Vue-store-project/work-on-catalogSingleData.json/responses';
 
 
 const app = new Vue({
