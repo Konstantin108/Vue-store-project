@@ -459,7 +459,7 @@ a {
 
 .blocks__position_featured,
 .products{
-  min-height: 839px;
+  min-height: 239px;
   width: 1140px;
   display: flex;
   flex-wrap: wrap;
@@ -653,6 +653,10 @@ a {
 
 .cart__hover:hover {
   box-shadow: 0px 0px 10px 0 white;
+}
+
+.cart__hover:active {
+  background-color: #f16d7f;
 }
 
 .hover_text {
@@ -3044,7 +3048,6 @@ input[type=radio] {
 
 .like_also {
   padding-top: 119px;
-  margin-bottom: 72px;
 }
 
 .border_for_test {

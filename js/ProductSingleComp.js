@@ -22,7 +22,7 @@ Vue.component('products_single', {
             });
     },
     template: `
-        <div class="products_single">
+        <div class="products">
             <product v-for="item of filtered" :key="item.id_product" :img="item.product_img" :product="item"></product>
         </div>
     `
