@@ -1,4 +1,4 @@
-Vue.component('cart', {
+Vue.component('cart_shopping', {
     data() {
         return {
             cartUrl: '/getBasket.json',
