@@ -1,29 +1,28 @@
-Vue.component('products', {
+Vue.component('products_single', {
     data() {
         return {
             catalogUrl: '/catalogSingleData.json',
-            products: [],
+            products_single: [],
             filtered: [],
-            // imgCatalog: 'img/oops.jpg',
         }
     },
     methods: {
         filter(value) {
             let regexp = new RegExp(value, 'i');
-            this.filtered = this.products.filter(el => regexp.test(el.product_name));
+            this.filtered = this.products_single.filter(el => regexp.test(el.product_name));
         }
     },
     mounted() {
         this.$parent.getJson(`${API + this.catalogUrl}`)
             .then(data => {
                 for (let el of data) {
-                    this.products.push(el);
+                    this.products_single.push(el);
                     this.filtered.push(el);
                 }
             });
     },
     template: `
-        <div class="products-single">
+        <div class="products_single">
             <product v-for="item of filtered" :key="item.id_product" :img="item.product_img" :product="item"></product>
         </div>
     `

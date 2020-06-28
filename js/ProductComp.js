@@ -4,7 +4,6 @@ Vue.component('products', {
             catalogUrl: '/catalogData.json',
             products: [],
             filtered: [],
-            // imgCatalog: 'img/oops.jpg',
         }
     },
     methods: {
