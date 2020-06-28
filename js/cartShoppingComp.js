@@ -35,6 +35,20 @@ Vue.component('cart_shopping', {
                     }
                 })
         },
+        // plusQuantity(item) {
+        //     item.quantity++;
+        // },
+        plusQuantity(item) {
+            this.$parent.getJson(`${API}/addToBasket.json`)
+                .then(data => {
+                    if (data.result === 1) {
+                        item.quantity++;
+                    }
+                });
+        },
+        // minusQuantity(item) {
+        //     item.quantity--;
+        // },
     },
     mounted() {
         this.$parent.getJson(`${API}/addToBasket.json`)
@@ -56,7 +70,9 @@ Vue.component('cart_shopping', {
                     :img="item.product_img"
                     :color="item.product_color"
                     :size="item.product_size"
-                    @remove="remove">
+                    @remove="remove"
+                    @plusQuantity="plusQuantity"
+                    @minusQuantity="minusQuantity">
                     </cart-item>
                     <total-sum v-if="cartItems.length > 0"></total-sum>
             </div>
@@ -64,7 +80,7 @@ Vue.component('cart_shopping', {
 });
 
 Vue.component('product-header', {
-   template:`
+    template: `
               <div class="content center">
                    <div class="left_basis_block border_for_test line_shopping_1 line__shopping">Product Details</div>
                    <div class="block_shopping_1 proba_standart_parameter_top line_shopping_1 border_for_test">unite Price</div>
@@ -78,13 +94,10 @@ Vue.component('product-header', {
 
 Vue.component('total-sum', {
     template: `
-                <div>
-                    <div class="text__total">TOTAL</div>
-                    <div class="cart_button_down">
-                        <a href="checkout.html" class="cart__button_sub">Checkout</a>
-                        <a href="shopping_cart.html" class="cart__button_sub last__button">Go to cart</a>
+                    <div class="shopping_button_down">
+                        <button class="clear__cart">cLEAR SHOPPING CART</button>
+                        <a href="Product.html" class="clear__cart"><p>continue shopping</p></a>
                     </div>
-                </div>
    `
 });
 
@@ -104,20 +117,23 @@ Vue.component('cart-item', {
                             </div>
                         </a>
                     </div>    
-                    <div class="block_shopping_1 proba_standart_parameter border_for_test line__shopping_other">
+                    <div class="block_shopping_1 proba_standart_parameter line__shopping_other">
                     $\{{cartItem.price}}
                     </div>
-                    <div class="block_shopping_2 proba_standart_parameter border_for_test line__shopping_other">
-                        <div class="shopping_cal">{{cartItem.quantity}}</div>
+                    <div class="block_shopping_2 proba_standart_parameter line__shopping_other">
+                        <div class="shopping_cal">{{cartItem.quantity}}
+                            <button class="plusQua" @click="$emit('plusQuantity', cartItem)">+</button>
+                            <button class="minusQua" @click="$emit('remove', cartItem)">-</button>
+                        </div>
                     </div>
-                    <div class="block_shopping_3 proba_standart_parameter border_for_test line__shopping_other">
+                    <div class="block_shopping_3 proba_standart_parameter line__shopping_other">
                     FREE
                     </div>
-                    <div class="block_shopping_4 proba_standart_parameter border_for_test line__shopping_other">
+                    <div class="block_shopping_4 proba_standart_parameter line__shopping_other">
                     $\{{cartItem.quantity*cartItem.price}}
                     </div>
-                    <div class="block_shopping_5 proba_standart_parameter border_for_test line__shopping_other">
-                        <i class="fas fa-times-circle del_btn" @click="$emit('remove', cartItem)"></i>
+                    <div class="block_shopping_5 proba_standart_parameter line__shopping_other">
+                        <i class="fas fa-times-circle del_btn"></i>
                     </div>  
                 </div>
     `

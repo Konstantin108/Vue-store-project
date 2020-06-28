@@ -1445,11 +1445,30 @@ button {
 
 .shopping_cart {
   font-size: 40px;
+  margin-top: 50px;
 }
 
 .cart_block {
   width: 32px;
   height: 29px;
+}
+
+.plusQua{
+  text-align: center;
+  width: 17px;
+  height: 14px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.minusQua{
+  text-align: center;
+  width: 17px;
+  height: 14px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
 .block__cart {
@@ -3207,6 +3226,7 @@ input[type=radio] {
   color: #656565;
   text-align: center;
   padding-top: 4px;
+  position: relative;
 }
 
 .shopping__image {
@@ -3312,7 +3332,17 @@ input[type=radio] {
   color: #6f6e6e;
 }
 
+.shopping_button_down{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
 .clear__cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: Lato;
   font-size: 14px;
   font-weight: 700;
