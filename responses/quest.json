@@ -9,7 +9,7 @@
       "answerB": "голова",
       "answerC": "толк",
       "answerD": "шпаргалка",
-      "correctAnswer": "С"
+      "correctAnswer": "C"
     },
     {
       "question": "Задрал нос — и кочергой не ...",
@@ -36,12 +36,12 @@
       "correctAnswer": "D"
     },
     {
-      "question": "Не за бороду — за ум...",
-      "answerA": "дергают",
-      "answerB": "уважают",
-      "answerC": "жалуют",
-      "answerD": "респектуют",
-      "correctAnswer": "C"
+      "question": "на чужой ... рот не разевай",
+      "answerA": "мешок",
+      "answerB": "пирожок",
+      "answerC": "растягай",
+      "answerD": "каравай",
+      "correctAnswer": "D"
     }
   ],
   "results": [
