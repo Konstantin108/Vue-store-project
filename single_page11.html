@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Title</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,400i,700,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/4bd251a57a.js" crossorigin="anonymous"></script>
@@ -54,7 +53,7 @@
                             </div>
                         </div>
                     </details>
-                    <filter-el></filter-el>
+                    <filter-single-el></filter-single-el>
                 </form>
             </div>
             <div class="header__right">
@@ -65,7 +64,7 @@
         </header>
         <nav class="nav center">
             <ul class="menu">
-                <li class="menu__list"><a href="#" class="menu__link">Home</a>
+                <li class="menu__list"><a href="index.html" class="menu__link">Home</a>
                     <div class="drop">
                         <div class="drop__flex">
                             <h3 class="drop__h3">Home</h3>
@@ -242,104 +241,160 @@
                 </li>
             </ul>
         </nav>
-        <div class="promo center">
-            <section class="promo__content">
-                <h2 class="promo__h2 line__hight_drand">THE BRAND</h2>
-                <h3 class="promo__h3">OF LUXERIOUS <span class="promo__color">FASHION</span></h3>
-            </section>
-        </div>
-        <div class="blocks_img center">
-            <div class="block__img1 block__img_trans">
-                <article class="text__block1 block__text_transform">
-                    <p class="title_block_img">HOT DEAL</p>
-                    <h3 class="title_block_img2">FOR MEN</h3>
-                </article>
+        <nav class="arrivals_product center">
+            <h2 class="arrivals_title">New Arrivals</h2>
+            <nav class="readcrumbs_arrivals"><a href="index.html" class="link_arrivals">Home/</a> <a href="#"
+                                                                                                     class="link_arrivals">Men/</a>
+                <a href="#" class="link_arrivals">New Arrivals</a></nav>
+        </nav>
+        <div class="women">
+            <div class="women_main_content">
+                <a href="#" class="women_slider_element"><i
+                        class="fas fa-chevron-left slider_arrow fa-chevron-left-women"></i></a>
+                <img src="img/product_content1.jpg" alt="women_main_img" class="women_main_img">
+                <a href="#" class="women_slider_element"><i
+                        class="fas fa-chevron-right slider_arrow fa-chevron-right-women"></i></a>
             </div>
-            <div class="block__img3 block__img_trans">
-                <article class="text__block3 block__text_transform">
-                    <p class="title_block_img">LUXIROS & TRENDY</p>
-                    <h3 class="title_block_img2">ACCESORIES</h3>
-                </article>
-            </div>
-            <div class="block__img2 block__img_trans">
-                <article class="text__block2 block__text_transform">
-                    <p class="title_block_img">30% OFFER</p>
-                    <h3 class="title_block_img2">WOMEN</h3>
-                </article>
-            </div>
-            <div class="block__img4 block__img_trans">
-                <article class="text__block4 block__text_transform">
-                    <p class="title_block_img">NEW ARRIVALS</p>
-                    <h3 class="title_block_img2">FOR KIDS</h3>
-                </article>
-            </div>
-        </div>
-        <div class="clr"></div>
-        <section class="fetured center">
-            <h3 class="fetured__title">Fetured Items</h3>
-            <p class="fetured__text">Shop for items based on what we featured in this week</p>
-            <products ref="products"></products>
-            <error ref="error"></error>
-        </section>
-        <div class="clearfix"></div>
-        <div class="space center">
-            <a href="Product.html" class="button_right">Browse All Product<img src="img/arrow_right.png"
-                                                                               alt="arrow_right"
-                                                                               class="arrow_right">
-            </a>
-        </div>
-        <aside class="offer_block">
-            <div class="left_block_offer">
-                <div class="offer_text_box">
-                    <h1 class="offer_title">30% <span class="special_color_offer">offer</span></h1>
-                    <p class="offer_text">for women</p>
-                </div>
-            </div>
-            <div class="right_block_offer">
-                <div class="right__subblock_offer">
-                    <img src="img/forma_car.png" alt="forma_car" class="forma_car">
-                    <div class="offer_text_right">
-                        <div class="offer_paragraph1">Free Delivery</div>
-                        <div class="offer_paragraph2">Worldwide delivery on&nbsp;all. Authorit tively morph
-                            next-generation
-                            innov tion with extensive models.
+            <div class="position__women_blocks"></div>
+            <div class="women__collection">
+                <article class="top__block">
+                    <div class="w__top_text_and_bottom">
+                        <div class="w__collection">WOMEN COLLECTION</div>
+                        <div class="bottom__w"></div>
+                        <div class="bottom__w2"></div>
+                    </div>
+                    <h2 class="w__text_moshino">Crew neckline blouse</h2>
+                    <p class="w__text">Compellingly actualize fully researched processes before proactive outsourcing.
+                        Progressively syndicate collaborative architectures before cutting-edge services. Completely
+                        visualize
+                        parallel core competencies rather than exceptional portals.</p>
+                    <div class="material_and_designer">
+                        <div class="w__left_block">
+                            <span class="w__material">MATERIAL:</span>
+                            <span class="w__design">COTTON</span>
+                        </div>
+                        <div class="w__right_block">
+                            <span class="w__material">DESIGNER:</span>
+                            <span class="w__design">BINBURHAN</span>
                         </div>
                     </div>
-                </div>
-                <div class="right__subblock_offer">
-                    <img
-                            src="img/forma_sale.png" alt="forma_sale" class="forma_sale">
-                    <div class="offer_text_right">
-                        <div class="offer_paragraph1">Sales&nbsp;&&nbsp;discounts</div>
-                        <div class="offer_paragraph2">Worldwide delivery on&nbsp;all. Authorit tively morph
-                            next-generation
-                            innov tion with extensive models.
+                    <p class="w__price">$106</p>
+                </article>
+                <div class="bottom__block">
+                    <div class="summares_bottom__block">
+                        <div class="choose__color_subblock">
+                            <h3 class="summares__titles">CHOOSE COLOR</h3>
+                            <details class="choose__size_details">
+                                <summary class="choose__color_summary_drop">
+                                    <div class="color__block">
+                                        <div class="color_sample red__sample"></div>
+                                        <p class="color__name">Red</p>
+                                    </div>
+                                </summary>
+                                <ul class="choose__size_menu">
+                                    <li class="choose__size_menu_list">
+                                        <a href="#" class="choose__color_menu_link">
+                                            <div class="color__block">
+                                                <div class="color_sample black__sample">
+                                                </div>
+                                                black
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="choose__size_menu_list">
+                                        <a href="#" class="choose__color_menu_link">
+                                            <div class="color__block">
+                                                <div class="color_sample yellow__sample">
+                                                </div>
+                                                yellow
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="choose__size_menu_list">
+                                        <a href="#" class="choose__color_menu_link">
+                                            <div class="color__block">
+                                                <div class="color_sample pink__sample">
+                                                </div>
+                                                pink
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="choose__size_menu_list">
+                                        <a href="#" class="choose__color_menu_link">
+                                            <div class="color__block">
+                                                <div class="color_sample green_sample">
+                                                </div>
+                                                green
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="choose__size_menu_list">
+                                        <a href="#" class="choose__color_menu_link">
+                                            <div class="color__block">
+                                                <div class="color_sample white__sample">
+                                                </div>
+                                                white
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="choose__size_menu_list">
+                                        <a href="#" class="choose__color_menu_link">
+                                            <div class="color__block">
+                                                <div class="color_sample blue_sample">
+                                                </div>
+                                                blue
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </details>
+                        </div>
+                        <div class="choose__size_subblock">
+                            <h3 class="summares__titles">CHOOSE SIZE</h3>
+                            <details class="choose__size_details">
+                                <summary class="choose__size_summary_drop">xxl</summary>
+                                <ul class="choose__size_menu">
+                                    <li class="choose__size_menu_list"><a href="#"
+                                                                          class="choose__size_menu_link">xxs</a></li>
+                                    <li class="choose__size_menu_list"><a href="#" class="choose__size_menu_link">xs</a>
+                                    </li>
+                                    <li class="choose__size_menu_list"><a href="#" class="choose__size_menu_link">s</a>
+                                    </li>
+                                    <li class="choose__size_menu_list"><a href="#" class="choose__size_menu_link">m</a>
+                                    </li>
+                                    <li class="choose__size_menu_list"><a href="#" class="choose__size_menu_link">l</a>
+                                    </li>
+                                    <li class="choose__size_menu_list"><a href="#" class="choose__size_menu_link">xl</a>
+                                    </li>
+                                </ul>
+                            </details>
+                        </div>
+                        <div class="quanity__subblock">
+                            <h3 class="summares__titles">QUANTITY</h3>
+                            <input type="number" class="quanity_input">
                         </div>
                     </div>
-                </div>
-                <div class="right__subblock_offer">
-                    <img src="img/forma_king.png" alt="forma_king" class="forma_king">
-                    <div class="offer_text_right">
-                        <div class="offer_paragraph1">Quality&nbsp;assurance</div>
-                        <div class="offer_paragraph2">Worldwide delivery on&nbsp;all. Authorit tively morph
-                            next-generation
-                            innov tion with extensive models.
-                        </div>
-                    </div>
+                    <bottom class="add__bottom_cart"><i class="fas fa-shopping-cart cart__bottom"></i>Add to Cart
+                    </bottom>
                 </div>
             </div>
-        </aside>
+        </div>
+        <div class="women__space"></div>
+        <div class="like_also center">
+            <h2 class="like__also_title">you may like also</h2>
+                <products_single ref="products_single"></products_single>
+                <error ref="error"></error>
+            </div>
+        </div>
     </div>
     <footer class="footer">
         <div class="beach_color">
             <div class="block_beach">
                 <figure class="left__block_beach">
-                    <div class="photo_block"><img src="img/women_face.png" alt="women__face" class="women__face">
-                    </div>
+                    <div class="photo_block"><img src="img/women_face.png" alt="women__face" class="women__face"></div>
                     <div class="only__text_beach">
-                        <p class="all__text">&laquo;Vestibulum quis porttitor dui! Quisque viverra nunc&nbsp;mi,
-                            a&nbsp;pulvinar purus condimentum&nbsp;a. Aliquam condimentum mattis neque sed
-                            pretium&raquo;</p>
+                        <p class="all__text">&laquo;Vestibulum quis porttitor dui! Quisque viverra nunc&nbsp;mi, a&nbsp;pulvinar
+                            purus condimentum&nbsp;a. Aliquam condimentum mattis neque sed pretium&raquo;</p>
                         <p class="name__text">Bin Burhan
                             <br><span class="special__color_beach">Dhaka, Bd</span></p>
                         <div class="line__beach"></div>
@@ -353,9 +408,7 @@
                     <br>
                     <form action="#" class="subscribe__form">
                         <input type="email" class="beach__subscribe" placeholder="Enter Your Email">
-                        <button
-                                class="beach_subscribe_button">Subscribe
-                        </button>
+                        <button class="beach_subscribe_button">Subscribe</button>
                     </form>
                 </div>
             </div>
@@ -369,14 +422,15 @@
                     syndicate an&nbsp;expanded array of&nbsp;processes and cross-unit partnerships.
                     <br>
                     <br>Efficiently plagiarize 24/365 action items and focused infomediaries. Distinctively seize
-                    superior initiatives for wireless technologies. Dynamically optimize.
+                    superior
+                    initiatives for wireless technologies. Dynamically optimize.
                 </div>
             </div>
             <nav class="new_menu_block">
                 <ul class="new_menu">
                     <li class="new_menu_list first_menu_link"><a href="" class="new_menu_link first_item">COMPANY</a>
                     </li>
-                    <li class="new_menu_list"><a href="#" class="new_menu_link">Home</a></li>
+                    <li class="new_menu_list"><a href="index.html" class="new_menu_link">Home</a></li>
                     <li class="new_menu_list"><a href="#" class="new_menu_link">Shop</a></li>
                     <li class="new_menu_list"><a href="#" class="new_menu_link">About</a></li>
                     <li class="new_menu_list"><a href="#" class="new_menu_link">How It Works</a></li>
@@ -386,7 +440,8 @@
             <nav class="new_menu_block">
                 <ul class="new_menu">
                     <li class="new_menu_list first_menu_link"><a href=""
-                                                                 class="new_menu_link first_item">INFORMATION</a></li>
+                                                                 class="new_menu_link first_item">INFORMATION</a>
+                    </li>
                     <li class="new_menu_list"><a href="#" class="new_menu_link">Tearms & Condition</a></li>
                     <li class="new_menu_list"><a href="#" class="new_menu_link">Privacy Policy</a></li>
                     <li class="new_menu_list"><a href="#" class="new_menu_link">How to Buy</a></li>
@@ -397,9 +452,10 @@
             <nav class="new_menu_block">
                 <ul class="new_menu">
                     <li class="new_menu_list first_menu_link"><a href="" class="new_menu_link first_item">SHOP
-                        CATEGORY</a></li>
+                        CATEGORY</a>
+                    </li>
                     <li class="new_menu_list"><a href="Product.html" class="new_menu_link">Men</a></li>
-                    <li class="new_menu_list"><a href="single_page.html" class="new_menu_link">Women</a></li>
+                    <li class="new_menu_list"><a href="#" class="new_menu_link">Women</a></li>
                     <li class="new_menu_list"><a href="#" class="new_menu_link">Child</a></li>
                     <li class="new_menu_list"><a href="#" class="new_menu_link">wrapperarel</a></li>
                     <li class="new_menu_list"><a href="#" class="new_menu_link">Brows All</a></li>
@@ -409,8 +465,9 @@
         <div class="footer_end center">
             <div class="copy_end">&copy; 2017 Brand All Rights Reserved.</div>
             <div class="social_links_end"><a href="#" class="link_end"><i class="fab fa-facebook-f link__icon"></i></a>
-                <a href="#" class="link_end"><i class="fab fa-twitter link__icon"></i></a> <a href="#"
-                                                                                              class="link_end"><i
+                <a
+                        href="#" class="link_end"><i class="fab fa-twitter link__icon"></i></a> <a href="#"
+                                                                                                   class="link_end"><i
                         class="fab fa-linkedin-in link__icon"></i></a> <a href="#" class="link_end"><i
                         class="fab fa-pinterest-p link__icon"></i></a> <a href="#" class="link_end"><i
                         class="fab fa-google-plus-g link__icon"></i></a></div>
